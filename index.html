@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigos Software - Presentación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 60px 0 0 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: white;
+            color: #667eea;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #667eea;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        nav a:hover {
+            background: #667eea;
+            color: white;
+        }
+        .cover {
+            text-align: center;
+            padding: 100px 20px;
+            background: #f9f9f9;
+        }
+        .cover h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+        .cover p {
+            font-size: 1.5em;
+            font-weight: 300;
+            color: #333;
+        }
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        section:nth-child(even) {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+        }
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-align: center;
+            position: relative;
+        }
+        section h2::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background: #667eea;
+            transform: translateX(-50%);
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+        .team-member h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .team-member p {
+            margin: 5px 0;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+        }
+        .portfolio-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .portfolio-card .content {
+            padding: 20px;
+        }
+        .portfolio-card h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+        }
+        .portfolio-card p {
+            margin: 0 0 15px 0;
+            color: #666;
+        }
+        .portfolio-card a {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            border: 1px solid #667eea;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .portfolio-card a:hover {
+            background: #667eea;
+            color: white;
+        }
+        .services, .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service, .tech {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 300px;
+        }
+        .service h3 i, .tech h3 i {
+            color: #667eea;
+            margin-right: 10px;
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Amigos Software</h1>
+            <nav>
+                <a href="#quienes-somos">Quiénes Somos</a>
+                <a href="#equipo">El Equipo</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#tecnologias">Tecnologías</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <div class="cover">
+        <div class="container">
+            <h1>Amigos Software</h1>
+            <p>Innovando juntos, código que conecta</p>
+        </div>
+    </div>
+
+    <section id="quienes-somos">
+        <div class="container">
+            <h2><i class="fas fa-users"></i> Quiénes Somos</h2>
+            <p>En Amigos Software, somos un equipo de cuatro apasionados desarrolladores con más de dos años de experiencia colaborativa en soluciones tecnológicas avanzadas. Unidos por la amistad y la visión compartida, hemos decidido emprender juntos para ofrecer servicios de desarrollo de software de alta calidad.</p>
+            <p>Nuestra misión es transformar ideas en realidades digitales, proporcionando soluciones innovadoras que optimicen procesos y potencien el éxito de nuestros clientes. Creemos en el poder de la tecnología para generar impacto positivo.</p>
+            <p><strong>Nuestros Valores:</strong> Innovación constante, Compromiso total con la calidad, Adaptabilidad a las necesidades del cliente.</p>
+        </div>
+    </section>
+
+    <section id="equipo">
+        <div class="container">
+            <h2><i class="fas fa-user-friends"></i> El Equipo</h2>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Axel Martinez">
+                <div>
+                    <h3>Axel Martinez</h3>
+                    <p><strong>Rol:</strong> Ingeniero en Software Backend</p>
+                    <p><strong>Experiencia:</strong> Especialista en SQL Server, JavaScript, APIs REST y Node.js. Ha trabajado en análisis de requerimientos, desarrollo web y soporte TI.</p>
+                    <p><strong>Tecnologías:</strong> JavaScript (ES6+), SQL Server, Node.js, Git, GitHub</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Karen Hernández González">
+                <div>
+                    <h3>Karen Hernández González</h3>
+                    <p><strong>Rol:</strong> Ingeniera en Tecnologías de la Información</p>
+                    <p><strong>Experiencia:</strong> Experta en soporte técnico, gestión de incidentes, análisis de datos y configuración de redes. Ha trabajado en expansión de redes y documentación técnica.</p>
+                    <p><strong>Tecnologías:</strong> SQL, Excel, Google Sheets, Redes, Bases de datos, Ciberseguridad</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Ronald Osvaldo Leyva Salmerón">
+                <div>
+                    <h3>Ronald Osvaldo Leyva Salmerón</h3>
+                    <p><strong>Rol:</strong> Desarrollador de Software Senior</p>
+                    <p><strong>Experiencia:</strong> 6 años en desarrollo de aplicaciones web y móviles, manejo de equipos, APIs REST y bases de datos.</p>
+                    <p><strong>Tecnologías:</strong> .NET Framework, C#, SQL Server, Java, MVC, Entity Framework, JavaScript, HTML, CSS</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Jair Avendaño">
+                <div>
+                    <h3>Jair Avendaño</h3>
+                    <p><strong>Rol:</strong> Desarrollador Web</p>
+                    <p><strong>Experiencia:</strong> Ingeniero Mecatrónico con conocimientos en desarrollo web. Ha trabajado en investigación y desarrollo de aplicaciones web para recomendación de semillas.</p>
+                    <p><strong>Tecnologías:</strong> PHP, Java, MySQL, HTML, CSS, JavaScript, MVC</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia">
+        <div class="container">
+            <h2><i class="fas fa-briefcase"></i> Experiencia Compartida</h2>
+            <p>Durante más de dos años, hemos trabajado juntos en una empresa desarrollando soluciones internas que han optimizado procesos y mejorado la eficiencia operativa. Nuestros proyectos han incluido:</p>
+            <ul>
+                <li><strong>Intranets:</strong> Plataformas internas para gestión de información y comunicación.</li>
+                <li><strong>Dashboards:</strong> Paneles de control para visualización de datos en tiempo real.</li>
+                <li><strong>Automatizaciones:</strong> Scripts y aplicaciones para automatizar tareas repetitivas.</li>
+            </ul>
+            <p>Los resultados obtenidos incluyen reducción de tiempos de proceso en un 30%, mejora en la toma de decisiones basada en datos y mayor satisfacción del usuario interno.</p>
+        </div>
+    </section>
+
+    <section id="portafolio">
+        <div class="container">
+            <h2><i class="fas fa-folder-open"></i> Portafolio Visual</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=THAISI" alt="THAISI">
+                    <div class="content">
+                        <h3>THAISI Platform: La Infraestructura del Futuro</h3>
+                        <p>Plataforma innovadora que combina talento humano con inteligencia artificial para crear soluciones tecnológicas avanzadas.</p>
+                        <a href="http://thaisi.org/" target="_blank">Ver Proyecto</a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Amistad" alt="Amistad Bienes Raíces">
+                    <div class="content">
+                        <h3>Amistad Bienes Raíces: Portal Inmobiliario</h3>
+                        <p>Sitio web corporativo para empresa inmobiliaria. Optimizado para experiencia de usuario y funcionalidad móvil.</p>
+                        <a href="https://amistadbienesraices.com/" target="_blank">Ver Proyecto</a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Gobierno" alt="Sistema Gubernamental">
+                    <div class="content">
+                        <h3>Sistema Gubernamental: Gestión Administrativa</h3>
+                        <p>Aplicación web para gestión gubernamental. Utiliza .NET Framework y SQL Server para operaciones seguras y eficientes.</p>
+                        <a href="http://108.181.200.246/MVCsaprojpjey/Account/Login" target="_blank">Ver Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2><i class="fas fa-concierge-bell"></i> Servicios que Ofrecen</h2>
+            <div class="services">
+                <div class="service">
+                    <h3><i class="fas fa-code"></i> Desarrollo Web</h3>
+                    <p>Creación de sitios web responsivos y funcionales.</p>
+                </div>
+                <div class="service">
+                    <h3><i class="fas fa-cogs"></i> Automatización de Procesos</h3>
+                    <p>Optimización de tareas repetitivas mediante scripts y aplicaciones.</p>
+                </div>
+                <div class="service">
+                    <h3><i class="fas fa-plug"></i> Integración con APIs</h3>
+                    <p>Conexión de sistemas mediante APIs REST y SOAP.</p>
+                </div>
+                <div class="service">
+                    <h3><i class="fas fa-palette"></i> Diseño UX/UI</h3>
+                    <p>Diseños intuitivos y atractivos para mejor experiencia de usuario.</p>
+                </div>
+                <div class="service">
+                    <h3><i class="fas fa-tools"></i> Soporte Técnico</h3>
+                    <p>Mantenimiento y resolución de incidencias en sistemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias">
+        <div class="container">
+            <h2><i class="fas fa-cogs"></i> Tecnologías que Dominan</h2>
+            <div class="technologies">
+                <div class="tech">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                </div>
+                <div class="tech">
+                    <h3>Backend</h3>
+                    <p>Node.js, .NET Framework, C#</p>
+                </div>
+                <div class="tech">
+                    <h3>Bases de Datos</h3>
+                    <p>SQL Server, PostgreSQL</p>
+                </div>
+                <div class="tech">
+                    <h3>Herramientas</h3>
+                    <p>Git, Docker, Azure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contacto">
+        <div class="container contact">
+            <h2><i class="fas fa-envelope"></i> Contacto</h2>
+            <p><strong>Contacto Principal:</strong> Karen Hernández González</p>
+            <p><strong>WhatsApp:</strong> +52 771 702 8400</p>
+            <p><strong>Correo:</strong> karenhgtech@gmail.com</p>
+            <p><strong>Redes Sociales:</strong> Próximamente en LinkedIn y sitio web.</p>
+        </div>
+    </section>
+</body>
+</html>
