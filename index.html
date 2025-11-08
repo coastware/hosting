@@ -252,6 +252,119 @@
             padding-top: 20px;
             border-top: 1px solid #34495e;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 80px;
+            }
+
+            header {
+                padding: 15px 0;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            header .logo {
+                height: 50px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                padding: 6px 10px;
+                font-size: 0.9em;
+            }
+
+            .cover {
+                padding: 60px 20px;
+            }
+
+            .cover .logo-large {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .cover p {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 40px 0;
+                margin: 15px 0;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .team-card {
+                padding: 20px;
+            }
+
+            .team-icon {
+                font-size: 3em;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services, .technologies {
+                flex-direction: column;
+            }
+
+            .service, .tech {
+                flex: none;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            .cover p {
+                font-size: 1.5em;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            .team-card h3 {
+                font-size: 1.2em;
+            }
+
+            .role {
+                font-size: 1em;
+            }
+
+            .tech {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -311,7 +424,7 @@
                     <div class="team-icon">
                         <i class="fas fa-user-circle"></i>
                     </div>
-                    <h3>Karen Hernández</h3>
+                    <h3>Karen Hernández González</h3>
                     <p class="role">Ingeniera en Tecnologías de la Información</p>
                     <p>Experta en soporte técnico, gestión de incidentes, análisis de datos y configuración de redes. Ha trabajado en expansión de redes y documentación técnica.</p>
                     <p class="tech">SQL, Excel, Google Sheets, Redes, Bases de datos, Ciberseguridad</p>
@@ -320,7 +433,7 @@
                     <div class="team-icon">
                         <i class="fas fa-user-circle"></i>
                     </div>
-                    <h3>Ronald Osvaldo Leyva</h3>
+                    <h3>Ronald Osvaldo Leyva Salmerón</h3>
                     <p class="role">Desarrollador de Software Senior</p>
                     <p>6 años en desarrollo de aplicaciones web y móviles, manejo de equipos, APIs REST y bases de datos.</p>
                     <p class="tech">.NET Framework, C#, SQL Server, Java, MVC, Entity Framework, JavaScript, HTML, CSS</p>
